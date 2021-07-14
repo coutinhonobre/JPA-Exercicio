@@ -23,7 +23,7 @@ public class ModeloDaoImp implements ModeloDao {
 
 	public void update(Modelo obj) {
 		entityManager.getTransaction().begin();
-		entityManager.persist(obj);
+		entityManager.merge(obj);
 		entityManager.getTransaction().commit();
 		
 	}

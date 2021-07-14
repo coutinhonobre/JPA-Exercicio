@@ -23,7 +23,7 @@ public class AutomovelDaoImp implements AutomovelDao {
 
 	public void update(Automovel obj) {
 		entityManager.getTransaction().begin();
-		entityManager.persist(obj);
+		entityManager.merge(obj);
 		entityManager.getTransaction().commit();
 		
 	}
