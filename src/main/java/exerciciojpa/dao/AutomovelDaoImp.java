@@ -39,7 +39,7 @@ public class AutomovelDaoImp implements AutomovelDao {
 	}
 
 	public List<Automovel> findAll() {
-		Query query = entityManager.createQuery("SELECT m FROM automovel m");
+		Query query = entityManager.createQuery("SELECT m FROM Automovel m");
 		return query.getResultList();
 	}
 

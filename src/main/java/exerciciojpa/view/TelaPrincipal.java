@@ -26,7 +26,7 @@ public class TelaPrincipal {
 			switch (opcao) {
 				case 1: return TelaMarca.menuMarca(console, em);
 				case 2: return TelaModelo.menuModelo(console, em);
-//				case 3: return TelaDisciplina.menuCurso(console);
+				case 3: return TelaAutomovel.menuAutomovel(console, em);
 				case 0: System.out.println("    Aplicação foi encerrada!");
 						break;
 				default:
