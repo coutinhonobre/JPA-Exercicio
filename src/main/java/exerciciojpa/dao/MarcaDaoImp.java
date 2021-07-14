@@ -23,7 +23,7 @@ public class MarcaDaoImp implements MarcaDao {
 
 	public void update(Marca obj) {
 		entityManager.getTransaction().begin();
-		entityManager.persist(obj);
+		entityManager.merge(obj);
 		entityManager.getTransaction().commit();
 		
 	}
