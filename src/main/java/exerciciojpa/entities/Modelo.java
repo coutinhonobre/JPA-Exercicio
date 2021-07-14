@@ -28,7 +28,7 @@ public class Modelo implements Serializable {
 	private Integer potencia;
 	
 	@Column(name = "marca_id")
-	private Integer marca;
+	private Marca marca;
 	
 	public Modelo() {
 		
@@ -38,7 +38,6 @@ public class Modelo implements Serializable {
 		this.id = id;
 		this.descricao = descricao;
 		this.potencia = potencia;
-		this.marca = marca.getId();
 	}
 
 	public Integer getId() {
@@ -65,11 +64,11 @@ public class Modelo implements Serializable {
 		this.potencia = potencia;
 	}
 
-	public Integer getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(Integer marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 

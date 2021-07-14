@@ -59,7 +59,7 @@ public class TelaModelo {
 		System.out.println("    =========================");
 		
 		System.out.print("    |     Id Marca: "); 
-		m.setMarca(console.nextInt()); 
+		m.setMarca(new MarcaDaoImp(em).findByid(console.nextInt())); 
 		console.nextLine();
 		
 		System.out.print("    |     Descrição: "); 
@@ -89,7 +89,7 @@ public class TelaModelo {
 			System.out.println("    |     " + c.getId()
 							 + "\t\t" 		+ c.getDescricao() 
 							 + "\t\t" 		+ c.getPotencia() 
-							 + "\t\t" 		+ new MarcaDaoImp(em).findByid(c.getMarca()).toString()
+							 + "\t\t" 		+ c.getMarca().toString()
 							 ); 
 		}
 		System.out.println("    =========================");
@@ -109,7 +109,7 @@ public class TelaModelo {
 		console.nextLine();
 		  
 		System.out.print("    |     Id Marca: "); 
-		m.setMarca(console.nextInt()); 
+		m.setMarca(new MarcaDaoImp(em).findByid(console.nextInt())); 
 		console.nextLine();
 		
 		System.out.print("    |     Descrição: "); 

@@ -31,7 +31,7 @@ public class Automovel implements Serializable {
 	private Integer kilometragem;
 	
 	@Column(name = "modelo_id")
-	private Integer modelo;
+	private Modelo modelo;
 	
 	public Automovel() {
 		
@@ -45,7 +45,7 @@ public class Automovel implements Serializable {
 		this.observacoes = observacoes;
 		this.preco = preco;
 		this.kilometragem = kilometragem;
-		this.modelo = modelo.getId();
+		this.modelo = modelo;
 	}
 
 	public Integer getId() {
@@ -96,11 +96,11 @@ public class Automovel implements Serializable {
 		this.kilometragem = kilometragem;
 	}
 
-	public Integer getModelo() {
+	public Modelo getModelo() {
 		return modelo;
 	}
 
-	public void setModelo(Integer modelo) {
+	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
 	}
 

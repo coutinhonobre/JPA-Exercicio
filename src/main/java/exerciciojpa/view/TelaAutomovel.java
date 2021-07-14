@@ -58,7 +58,7 @@ public class TelaAutomovel {
 		System.out.println("    =========================");
 		
 		System.out.print("    |     Id Modelo: "); 
-		a.setModelo(console.nextInt()); 
+		a.setModelo(new ModeloDaoImp(em).findByid(console.nextInt())); 
 		console.nextLine();
 		
 		System.out.print("    |     Ano Fabricação: "); 
@@ -102,7 +102,7 @@ public class TelaAutomovel {
 							 + "\t\t" 		+ a.getAnoModelo() 
 							 + "\t\t" 		+ a.getPreco() 
 							 + "\t\t" 		+ a.getKilometragem() 
-							 + "\t\t" 		+ new ModeloDaoImp(em).findByid(a.getModelo()).toString()
+							 + "\t\t" 		+ a.getModelo().toString()
 							 + "\t\t" 		+ a.getObservacoes() 
 							 ); 
 		}
@@ -123,7 +123,7 @@ public class TelaAutomovel {
 		console.nextLine();
 		  
 		System.out.print("    |     Id Modelo: "); 
-		a.setModelo(console.nextInt()); 
+		a.setModelo(new ModeloDaoImp(em).findByid(console.nextInt())); 
 		console.nextLine();
 		
 		System.out.print("    |     Ano Fabricação: "); 
