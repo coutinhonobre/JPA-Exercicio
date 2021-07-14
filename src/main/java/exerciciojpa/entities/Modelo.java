@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MapsId;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -25,7 +28,7 @@ public class Modelo implements Serializable {
 	private Integer potencia;
 	
 	@Column(name = "marca_id")
-	private Marca marca;
+	private Integer marca;
 	
 	public Modelo() {
 		
@@ -35,7 +38,7 @@ public class Modelo implements Serializable {
 		this.id = id;
 		this.descricao = descricao;
 		this.potencia = potencia;
-		this.marca = marca;
+		this.marca = marca.getId();
 	}
 
 	public Integer getId() {
@@ -62,11 +65,11 @@ public class Modelo implements Serializable {
 		this.potencia = potencia;
 	}
 
-	public Marca getMarca() {
+	public Integer getMarca() {
 		return marca;
 	}
 
-	public void setMarca(Marca marca) {
+	public void setMarca(Integer marca) {
 		this.marca = marca;
 	}
 

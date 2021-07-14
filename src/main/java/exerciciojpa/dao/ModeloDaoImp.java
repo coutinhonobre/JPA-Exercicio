@@ -39,7 +39,7 @@ public class ModeloDaoImp implements ModeloDao {
 	}
 
 	public List<Modelo> findAll() {
-		Query query = entityManager.createQuery("SELECT m FROM modelo m");
+		Query query = entityManager.createQuery("SELECT m FROM Modelo m");
 		return query.getResultList();
 	}
 
